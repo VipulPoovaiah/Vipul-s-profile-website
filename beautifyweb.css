@@ -111,7 +111,7 @@ button.active {
 .section-divider {
   border: none;
   height: 5px;
-  background: linear-gradient(to right, #ff4e50, #1fdd9f);
+  background: black;
   margin: 60px 0;
   width: 100%;
   border-radius: 3px;
@@ -217,3 +217,4 @@ button.active {
 .youtube { background-color: #FF0000; }
 .github { background-color: #333; }
 .x { background-color: #000; }
+
