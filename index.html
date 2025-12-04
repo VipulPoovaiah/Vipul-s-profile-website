@@ -1,1 +1,318 @@
-HTML code will be added later here
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vipul's Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="socialbtn.css"/>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #fafafa;
+    }
+
+    .nav-bar {
+      position: fixed;
+      top: 20px;
+      left: 2%;
+      right: 2%;
+      padding: 0% 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #999999;
+      border-radius: 40px;
+      z-index: 1000;
+    }
+
+    .nav-bar-right {
+      display: none; /* hidden by default */
+      flex-direction: column;
+      gap: 10px;
+      background: #999999;
+      border-radius: 20px;
+      padding: 10px;
+      position: absolute;
+      top: 60px;
+      right: 5%;
+    }
+
+    .nav-bar-right.show {
+      display: flex; /* show when toggled */
+    }
+
+    .hamburger {
+      font-size: 24px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: white;
+    }
+
+    button {
+      border: none;
+      padding: 10px 16px;
+      font-size: 16px;
+      border-radius: 12px;
+      background: #ffb400;
+      color: white;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      transform: scale(0.95);
+    }
+
+    button.active {
+      background: white;
+      color: #ffb400;
+      outline: 2px solid #ffb400;
+    }
+
+    .vipul {
+      background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      font-weight: bold;
+      background-size: 400% 100%;
+      animation: rainbow_animation 50s ease-in-out infinite;
+    }
+
+    @keyframes rainbow_animation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .card {
+      background: #f5f5f5;
+      padding: 30px;
+      border-radius: 20px;
+      margin: 40px auto;
+      width: 80%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    }
+    
+    .card.active {
+      transform: scale(1.02);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+      border: 2px solid #ffb400;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    p, li {
+      font-size: 18px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    .download-btn {
+      background: #ffb400;
+      color: white;
+      font-size: 18px;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+
+    #profile{
+      display:flex; 
+      align-items:center; 
+      gap:20px;
+    }
+    #contact p{
+      font-size: 12px;
+    }
+  </style>
+  <link rel="stylesheet" href="beautifyweb.css"/>
+</head>
+<body>
+  <div class="nav-bar">
+    <div class="nav-bar-left">
+      <h1 class="vipul">Vipul Poovaiah's Portfolio</h1>
+    </div>
+    <!-- Hamburger icon -->
+    <button class="hamburger"><i class="fas fa-bars"></i></button>
+    <div class="nav-bar-right">
+      <button data-target="profile">Profile</button>
+      <button data-target="skills">Skills</button>
+      <button data-target="education">Education</button>
+      <button data-target="projects">Projects</button>
+      <button data-target="achievements">Achievements</button>
+      <button data-target="certifications">Certifications</button>
+      <button data-target="download">Resume</button>
+      <button data-target="contact">Contact</button>
+      <button data-target="Links">Links</button>
+    </div>
+  </div>
+
+  <div style="margin-top:140px; padding: 0 5%;">
+    <!-- your cards remain unchanged -->
+     <div id="profile" class="card">
+  <div>
+    <img src="vipul.png" alt="Vipul Poovaiah" style="width:100px; border-radius:10%;">
+  </div>
+  
+  <div>
+    <h2 style="margin-top:0;">Profile</h2>
+    <p>I,M V Vipul Poovaiah,am Computer Science Engineering student seeking a challenging role in a dynamic organization where I can apply my skills in software development, problem-solving, and analytical thinking. I aim to leverage my knowledge in programming, data structures, emerging technologies, and my strong interest in game development to create efficient and impactful solutions. Currently pursuing my 3rd year of B.E. at Malnad College, I am committed to continuous learning and contributing meaningfully to both personal and organizational growth.</p>
+  </div>
+</div>
+
+    <div id="skills" class="card">
+      <h2>Skills</h2>
+      <ul>
+        <li>Web Development (HTML, CSS)</li>
+        <li>UI/UX Design using Figma</li>
+        <li>Problem Solving & Algorithms</li>
+        <li>Python</li>
+        <li>GameMaker</li>
+      </ul>
+    </div>
+
+    <div id="education" class="card">
+      <h2>Education</h2>
+      <p>BE in Computer Science, Malnad College of Engineering (Present)</p>
+      <p>PUC (PCMC), Master's PU College (2023)</p>
+      <p>High School, Christ School (2021)</p>
+    </div>
+
+    <div id="projects" class="card">
+      <h2>Projects</h2>
+      <ul>
+        <li>Portfolio Website - Designed and developed a responsive personal portfolio.</li>
+        <li>Game - Built a game using gamemaker and hosted publically.</li>
+        <li>UI/UX designing - Designed a UI/UX app focused on helping users make new friends.</li>
+      </ul>
+    </div>
+
+    <div id="achievements" class="card">
+      <h2>Achievements</h2>
+      <ul>
+        <li>Won a quiz competition hosted by NSS</li>
+        <li>Top 5% on NPTEL Course</li>
+      </ul>
+    </div>
+
+    <div id="certifications" class="card">
+      <h2>Certifications</h2>
+      <ul>
+        <li>Certified in Social networks (NPTEL)</li>
+        <li>Python Programming Certificate (Malnad)</li>
+        <li>Scratch Certificate (Malnad)</li>
+      </ul>
+    </div>
+
+    <div id="download" class="card">
+      <h2>Download Resume</h2>
+      <p>Click below to download my latest resume:</p>
+      <a href="Vipul cv.pdf" download>
+        <button class="download-btn">Download PDF</button>
+      </a>
+    </div>
+
+    <hr class="section-divider">
+
+<!-- Contact Section -->
+<section id="contact-section">
+  <h2>Contact Me</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+    <p>*If the messaging feature is unavailable, feel free to reach out using my provided links.</p>
+  </form>
+</section>
+
+<!-- Links Section -->
+<section id="links-section">
+  <h2>Links</h2>
+  <div class="social-buttons">
+    <a href="https://youtube.com/@vipulpoovaiah?si=by4uDj_ybc_qh5Cu" class="btn youtube" target="_blank">
+      <i class="fab fa-youtube"></i> YouTube
+    </a>
+    <a href="https://share.google/ZbIfL7FnPFou5C5TP" class="btn github" target="_blank">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+    <a href="https://x.com/vipulpoovaiah?t=D0PFwR2yRxgQaz8MDjKwAA&s=08" class="btn x" target="_blank">
+      <i class="fab fa-x-twitter"></i> X
+    </a>
+  </div>
+</section>
+  </div >
+
+  <script>
+    // Toggle hamburger menu
+    document.querySelector('.hamburger').addEventListener('click', function() {
+      document.querySelector('.nav-bar-right').classList.toggle('show');
+    });
+
+    // Handle nav button clicks
+    document.querySelectorAll('.nav-bar-right button').forEach(button => {
+      button.addEventListener('click', function() {
+        const targetId = this.getAttribute('data-target');
+
+        // Reset all buttons
+        document.querySelectorAll('.nav-bar-right button').forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+
+        // Reset all cards
+        document.querySelectorAll('.card').forEach(card => card.classList.remove('active'));
+        const selectedCard = document.getElementById(targetId);
+        selectedCard.classList.add('active');
+
+        // Scroll into view
+        selectedCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        // Hide menu after click
+        document.querySelector('.nav-bar-right').classList.remove('show');
+      });
+    });
+
+    // Handle card clicks
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('click', function() {
+        const id = this.id;
+
+        // Reset all cards
+        document.querySelectorAll('.card').forEach(c => c.classList.remove('active'));
+        this.classList.add('active');
+
+        // Reset all buttons
+        document.querySelectorAll('.nav-bar-right button').forEach(btn => btn.classList.remove('active'));
+
+        // Find matching button and activate it
+        document.querySelectorAll('.nav-bar-right button').forEach(btn => {
+          if (btn.getAttribute('data-target') === id) {
+            btn.classList.add('active');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

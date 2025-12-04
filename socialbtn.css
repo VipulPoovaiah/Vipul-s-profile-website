@@ -1,0 +1,43 @@
+
+    .social-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.btn {
+  width: 180px;             /* fixed width for all buttons */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Brand colors */
+.youtube {
+  background-color: #FF0000; /* YouTube red */
+}
+
+.github {
+  background-color: #333; /* GitHub dark gray */
+}
+
+.x {
+  background-color: #000; /* X (Twitter) black */
+}
+
+/* Optional: Font Awesome icons */
+.fab {
+  font-size: 18px;
+}
